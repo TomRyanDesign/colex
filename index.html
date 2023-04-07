@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=0.5" />
+<title>colex</title>
+<link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css">
+<style>
+	* {
+	color: #111;
+	font-family: Helvetica, Arial, sans-serif;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	outline: none;
+}
+body {
+	font-size: 8pt;
+	background-color: #f5f5f5;
+	margin: 0;
+	padding: 2%;
+}
+header, section, footer {
+	background-color: #f0f0f0;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	margin: 0 0 20px;
+	padding: 10px;
+}
+header h1 {
+	margin: 0 20px 0 0;
+	float: left;
+}
+header nav ul,
+header nav ul li {
+	list-style: none;
+	list-style-type: none;
+	float: left;
+	padding: 0;
+	margin: 0 20px 0 0;
+}
+header nav {
+	padding: 10px;
+}
+header nav, aside, article {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	float: left;
+}
+section {
+	background-color: #fff;
+}
+section h2,
+aside h3,
+article h3 {
+	margin-top: 0;
+}
+aside, article, footer {
+	background-color: #f5f5f5;
+	padding: 1%;
+}
+aside {
+	font-size: 80%;
+	width: 19.5%;
+	margin: 0 1% 20px 0;
+}
+article {
+	width: 79.5%;
+	margin: 0 0 20px 0;
+}
+article p {
+	font-size: 2em;
+}
+footer {
+	margin: 0;
+}
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.clear {
+	clear: both;
+	float: none;
+}
+.icon-container {
+	margin: 0 0 20px 20px;
+	clear: both;
+	float: right;
+	position: relative;
+	bottom: 0;
+	right: 0;
+	z-index: 9999;
+}
+.icon {
+	font-size: 0;
+	text-indent: 100%;
+	background: #f5f5f5;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Y1ZjVmNSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #f5f5f5 0%, #eaeaea 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#eaeaea));
+	background: -webkit-linear-gradient(top,  #f5f5f5 0%,#eaeaea 100%);
+	background: -o-linear-gradient(top,  #f5f5f5 0%,#eaeaea 100%);
+	background: -ms-linear-gradient(top,  #f5f5f5 0%,#eaeaea 100%);
+	background: linear-gradient(to bottom,  #f5f5f5 0%,#eaeaea 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#eaeaea',GradientType=0 );
+	-webkit-box-shadow: 1px 1px 2px #eee, 0 1px 0 #fff inset;
+	-moz-box-shadow: 1px 1px 2px #eee, 0 1px 0 #fff inset;
+	box-shadow: 1px 1px 2px #eee, 0 1px 0 #fff inset;
+	-webkit-border: 1px solid #cfcdcd;
+	-moz-border: 1px solid #cfcdcd;
+	border: 1px solid #cfcdcd;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 48px;
+	height: 48px;
+	padding: 7px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+}
+.icon:active {
+	background: #e3e3e3;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2UzZTNlMyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjM2MzYzMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+	background: -moz-linear-gradient(top,  #e3e3e3 0%, #c3c3c3 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3e3e3), color-stop(100%,#c3c3c3));
+	background: -webkit-linear-gradient(top,  #e3e3e3 0%,#c3c3c3 100%);
+	background: -o-linear-gradient(top,  #e3e3e3 0%,#c3c3c3 100%);
+	background: -ms-linear-gradient(top,  #e3e3e3 0%,#c3c3c3 100%);
+	background: linear-gradient(to bottom,  #e3e3e3 0%,#c3c3c3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e3e3', endColorstr='#c3c3c3',GradientType=0 );
+}
+.icon span {
+	line-height: 32px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	background-size: 100% auto;
+	width: 32px;
+	height: 32px;
+	display: block;
+	position: absolute;
+	top: 7px;
+	left: 7px;
+}
+.icon span:hover {
+	background-position: 50% 33.3333%;
+}
+.icon span:active {
+	background-position: 50% 66.6666%;
+}
+.icon span.collapse {
+	background-image: url(../badger/Content/images/icon-expand.png);
+}
+.icon span.expand {
+	background-image: url(../badger/Content/images/icon-collapse.png);
+}
+
+
+
+#target-5 {
+	font-size: 0;
+	width: 68px;
+	height: 68px;
+	float: right;
+	position: relative;
+}
+/*#target-5 aside, #target-5 h2, #target-5 p {
+	opacity: 0.0;
+}*/
+div.DERP {
+	font-size: 5pt;
+	text-align: center;
+	line-height: 0;
+	margin: 0;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+<script src="jquery.colex.js"></script>
+</head>
+
+<body>
+<header>
+	<h1>.colex()</h1>
+	<nav>
+		<ul>
+			<li><a href="#" class="colex" id="colex-2">aside </a></li>
+			<li><a href="#" class="colex" id="colex-3">article </a></li>
+			<li><a href="#" class="colex" id="colex-4">footer </a></li>
+		</ul>
+	</nav>
+	<div class="clear"></div>
+</header>
+<section id="target-1">
+	<h2>section</h2>
+	<aside id="target-2">
+		<h3>aside</h3>
+		<p>If this page had sidebar content, it could appear here.</p>
+	</aside>
+	<article id="target-3">
+		<h3>article</h3>
+		<p>Colex is a tiny jQuery plugin which toggles a given target open and shut with a variety of possible animation and easing methods.</p>
+		<p>It is flexible enough to build each controller out of anything you like in order to fit the needs of designers and coders alike.</p>
+		<p>To see Colex in action, try the links at the upper left or the button at the lower right.</p>
+	</article>
+	<div class="clear"></div>
+	<footer id="target-4">
+		<h3>footer</h3>
+		<p>Colex plugin is &copy;<span id="year"></span> Tom Ryan Design. All rights reserved.</p>
+	</footer>
+</section>
+<section id="target-5">
+	<div class="icon-container"><a href="#" id="colex-5" class="icon"></a></div>
+	<aside>
+		<h3>quis leo</h3>
+		<p>Mauris auctor, turpis vitae luctus euismod, felis sapien auctor diam, id congue neque eros ut diam. Etiam lacinia mi erat.</p>
+		<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras malesuada condimentum est, non eleifend leo.</p>
+		<p>Nunc laoreet mauris vitae purus molestie euismod. Aliquam non risus mi. Sed leo sem, tempor vel porta non, euismod a.</p>
+	</aside>
+	<h2>Lorem ipsum dolor sit amet</h2>
+	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris massa quam, ullamcorper quis rhoncus placerat, dapibus quis velit. Nulla facilisi. Nulla lorem purus, volutpat quis interdum nec, tempor nec erat. Sed id tortor eu lorem hendrerit venenatis nec et metus. Suspendisse ut nulla ac mauris condimentum bibendum. Sed a mi sed velit auctor mattis nec in lacus. Vestibulum elementum tincidunt scelerisque. Etiam tempus, massa volutpat ultrices elementum, velit odio malesuada magna, id venenatis tortor sapien sed risus. Curabitur in sapien nisi. Sed non enim massa, non semper est. Phasellus scelerisque risus at quam cursus dictum. Nam vitae urna id sem gravida porta eu gravida risus.</p>
+	<p>Etiam sit amet enim ipsum, consectetur tristique eros. Nam tincidunt venenatis leo nec bibendum. Ut id fermentum diam. Suspendisse ornare viverra orci, vitae sodales urna iaculis vel. Curabitur fermentum felis vel arcu facilisis ut volutpat mauris tempus. Quisque dictum elit sit amet mi luctus facilisis. Pellentesque vel augue a lacus semper porta. Donec tincidunt dolor ac orci molestie a mattis nulla sagittis. Donec faucibus iaculis turpis nec eleifend.</p>
+	<p>Donec arcu dui, viverra eu elementum vitae, dictum non metus. Vestibulum et tellus nulla. Vestibulum elementum rhoncus suscipit. Fusce a enim ac sapien dapibus facilisis at ac magna. Vivamus vel nibh vitae orci aliquet suscipit a quis velit. Pellentesque quis tellus in lacus auctor aliquet. In eleifend nulla ac tellus euismod accumsan. Nunc venenatis, dolor ac convallis posuere, nisi velit porta turpis, a molestie eros purus ac dui. Donec vehicula, ligula ac adipiscing elementum, sem nisi porttitor orci, quis pellentesque ligula diam et mauris. Nam congue fringilla odio ut tincidunt.</p>
+	<div class="clear"></div>
+</section>
+<script>
+$(document).ready(function() {
+	$('#year').text(new Date().getFullYear());
+	/*
+	$("#target-1").colex({
+		controllers: [{selector: "#colex-1"}, {selector: "#colex-5"}]
+	});
+	$('#colex-1').colex({
+		target: '#target-1'
+	});
+	*/
+	$('#colex-2').colex({
+		initState: 1,
+		target: '#target-2'
+	});
+	$('#colex-3').colex({
+		initState: 1,
+		target: '#target-3'
+	});
+	$('#colex-4').colex({
+		initState: 1,
+		target: '#target-4'
+	});
+	$('#colex-5').colex({
+		initState: 1,
+		target: '#target-1',
+		colSpeed: 500,
+		expSpeed: 500,
+		easeExp: 'easeInOutCubic',
+		easeCol: 'easeInOutCubic',
+		labelSpeed: 500,
+		labelDelay: 500,
+		afterExpCmds: function() {
+			$('#target-5').animate({fontSize: '0'}, 500).animate({width: '68px'}, 500).animate({height: '68px'}, 500);
+			$('#target-5 aside, #target-5 h2, #target-5 p').fadeTo(500, 0.0, 'easeInOutCubic');
+		},
+		afterColCmds: function() {
+			$('#target-5').animate({width: '100%'}, 500).animate({height: '100%'}, 500).animate({fontSize: '100%'}, 500);
+			$('#target-5 aside, #target-5 h2, #target-5 p').fadeTo(500, 1.0, 'easeInOutCubic');
+		}
+	});
+});
+</script>
+</body>
+</html>
